@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<h3 class="mb-3">Upload & Grade</h3>
+<form action="/upload" method="post" enctype="multipart/form-data" class="mb-4">
+  <div class="row g-3">
+    <div class="col-md-4">
+      <label class="form-label">Answer Key (.xlsx/.csv)</label>
+      <input class="form-control" type="file" name="key" accept=".xlsx,.xls,.csv" required>
+    </div>
+    <div class="col-md-8">
+      <label class="form-label">OMR Images (JPG/PNG) — multiple allowed</label>
+      <input class="form-control" type="file" name="images" accept=".jpg,.jpeg,.png" multiple required>
+    </div>
+  </div>
+  <div class="mt-3">
+    <button class="btn btn-primary">Run Grading</button>
+  </div>
+</form>
+
+<h4 class="mb-2">Recent</h4>
+<div class="row g-3">
+{% for r in rows %}
+  <div class="col-md-6 col-lg-4">
+    <div class="card p-3 h-100">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="fw-semibold">{{ r.image_name }}</div>
+        <a class="btn btn-sm btn-outline-info" href="/submissions/{{ r.id }}">Open</a>
+      </div>
+      <div class="row mt-2">
+        <div class="col metric">Total<br><strong>{{ r.total_correct }}</strong></div>
+        <div class="col metric">Python<br><strong>{{ r.python_score }}</strong></div>
+      </div>
+      <img class="mt-2 w-100" src="{{ r.overlay_path }}">
+    </div>
+  </div>
+{% else %}
+  <p class="muted">No submissions yet.</p>
+{% endfor %}
+</div>
+{% endblock %}

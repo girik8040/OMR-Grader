@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h3 class="mb-3">All Submissions</h3>
+<div class="table-responsive">
+<table class="table table-dark table-striped align-middle">
+  <thead>
+    <tr>
+      <th>ID</th><th>Image</th><th>Total</th>
+      <th>Python</th><th>Data Analysis</th><th>MySQL</th><th>Power BI</th><th>Adv Stats</th>
+      <th>Overlay</th><th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for r in rows %}
+    <tr>
+      <td>{{ r.id }}</td>
+      <td>{{ r.image_name }}</td>
+      <td>{{ r.total_correct }}</td>
+      <td>{{ r.python_score }}</td>
+      <td>{{ r.data_analysis_score }}</td>
+      <td>{{ r.mysql_score }}</td>
+      <td>{{ r.power_bi_score }}</td>
+      <td>{{ r.adv_stats_score }}</td>
+      <td><a href="{{ r.overlay_path }}" target="_blank">view</a></td>
+      <td><a class="btn btn-sm btn-outline-info" href="/submissions/{{ r.id }}">Details</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}
