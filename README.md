@@ -149,8 +149,11 @@ a,b,c,b,a
 c,d,c,a,b
 b,b,a,d,c
 ```
+<img width="866" height="908" alt="Screenshot 2025-09-20 211626" src="https://github.com/user-attachments/assets/2e8b6c6f-5af7-48ff-9613-6f732295b5b5" />
+<img width="250" height="280" alt="Screenshot 2025-09-20 202622" src="https://github.com/user-attachments/assets/5c57273f-5b47-4058-afbf-8ffc0a5797ba" />
 
 ---
+<img width="997" height="964" alt="Screenshot 2025-09-21 001851" src="https://github.com/user-attachments/assets/b0e433b0-cc56-47a0-bdc9-1d910383535e" />
 
 ## **How It Works (Short Version)**
 - **Preprocess** → grayscale, adaptive threshold; estimate skew via Hough lines; rotate.
