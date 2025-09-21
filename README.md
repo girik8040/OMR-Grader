@@ -162,6 +162,12 @@ b,b,a,d,c
 - **Decide** → measure ink inside vs. local background; pick best candidate with margin.
 - **Score** → compare predictions with key; compute per-subject + total.
 - **Render** → draw colored circles, save overlay.
+- step1
+- <img width="1100" height="1141" alt="01_raw_gray" src="https://github.com/user-attachments/assets/3699eff9-629a-4d0d-a8f4-81f6500c0f90" />
+step2
+<img width="1100" height="1141" alt="02_ink_binary" src="https://github.com/user-attachments/assets/69668c32-f13a-428c-a0ad-16828a846dae" />
+step 3
+<img width="1100" height="1141" alt="03_hough_all" src="https://github.com/user-attachments/assets/ca0f8baf-495d-4206-89e1-f5fd938d55bd" />
 
 ---
 
