@@ -206,9 +206,4 @@ For server deployments, add access control and HTTPS.
 
 ---
 
-## **License**
-MIT — see `LICENSE`.
-
----
-
 *Built with FastAPI, OpenCV, NumPy, pandas, SQLAlchemy, and Bootstrap.*
